@@ -3,15 +3,19 @@ pipeline {
     stages {
         stage ("Initialize") {
             steps {
-                sh '''
-                    echo "PATH = $PATH"
-                    echo "M2_HOME = ${M2_HOME}"
-                '''
+                echo "Testing ..."
             }
         }
+
         stage ("Build") {
             steps {
-                echo "Hello, world"
+                echo "Building ..."
+            }
+        }
+
+        stage ("Deploy") {
+            steps {
+                echo "Code deployed."
             }
         }
     }
